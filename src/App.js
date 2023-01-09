@@ -14,9 +14,9 @@ import NavBar from './Components/NavBar';
 
 function App() {
   return (
-   
     <Router>
        <div className="App">
+        <div className='main'>
       <NavBar/>
     <Routes>
     <Route exact path="/" element={<Home/>}></Route>
@@ -24,6 +24,7 @@ function App() {
     <Route exact path="/Subtraction" element={<Subtraction/>}></Route>
     <Route exact path="/MixedMath" element={<MixedMath/>}></Route>
     </Routes>
+    </div>
     </div>
     </Router>
     

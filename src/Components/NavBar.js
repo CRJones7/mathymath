@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
 const NavBar = () => {
+    const [navOpen, setNavOpen] = useState(false)
     return(
-        <div>
+        <div>{!navOpen ?
+            <span className='openNav' onClick={() => setNavOpen(true)}>O</span>
+            :
             <ul className='nav'>
-                <li>
-                <Link to="/">Home</Link>
+                <li className='links'>&times;</li>
+                <li >
+                <Link to="/" className='links'>Home</Link>
                 </li>
-                <li>
-                <Link to="/Addition">Addition Fun</Link>
+                <li className='links'>
+                <Link to="/Addition" className='links'>Addition Fun</Link>
                 </li>
-                <li>
-                <Link to="/Subtraction">Subtraction Fun</Link>
-                </li>
-                <li>
-                <Link to="/MixedMath">Mixed Questions</Link>
+                <li className='links'>
+                <Link to="/Subtraction" className='links'>Subtraction Fun</Link>
+                </li >
+                <li className='links'>
+                <Link to="/MixedMath" className='links'>Mixed Questions</Link>
                 </li>
             </ul>
+            }
         </div>
     )
 }

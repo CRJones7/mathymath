@@ -7,8 +7,46 @@ body {
 code {
   font-family: 'Chakra Petch';
 }
+/* .App{ */
+  /* so the page pushes to the side */
+  /* transition: margin-left .5s;
+  padding: 20px;
+} */
 
 .nav{
-  background-color: aqua;
+  height: 100%;
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(19, 27, 93, 0.836);
+  z-index: 1;
+  padding-top: 60px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: #de0909;
+}
+
+.nav li .links {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #de0909;
+  display: block;
+  transition: 0.3s;
   position: relative;
+}
+
+.nav li:hover {
+  color: #f1f1f1;
+}
+
+.openNav{
+  height: fit-content;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 3px;
+  z-index: 1;
+
 }
