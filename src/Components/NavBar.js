@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import "./main.css"
 
 const NavBar = () => {
     const [navOpen, setNavOpen] = useState(false)
     return(
         <div>{!navOpen ?
-            <span className='openNav' onClick={() => setNavOpen(true)}>O</span>
+            <span className='openNav' onClick={() => setNavOpen(true)}>Menu</span>
             :
             <ul className='nav'>
-                <li className='links'>&times;</li>
+                <li className='links exitNav' onClick={() => setNavOpen(false)}>&times;</li>
                 <li >
                 <Link to="/" className='links'>Home</Link>
                 </li>
                 <li className='links'>
-                <Link to="/Addition" className='links'>Addition Fun</Link>
+                <Link to="/Addition" className='links'>Addition</Link>
                 </li>
                 <li className='links'>
-                <Link to="/Subtraction" className='links'>Subtraction Fun</Link>
+                <Link to="/Subtraction" className='links'>Subtraction</Link>
                 </li >
                 <li className='links'>
                 <Link to="/MixedMath" className='links'>Mixed Questions</Link>
