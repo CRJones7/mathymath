@@ -313,6 +313,12 @@
             margin-right: 7%;
             
         }
+        .incorrect{
+            margin-top: 60%;
+        }
+        .correct{
+            margin-top: 60%;
+        }
     }
     .tooltip:hover{
         display: block;
@@ -330,22 +336,34 @@
       
     }
 
-    .correct .incorrect{
-        margin-top: 30%;
+    .correct {
+        margin-top: 20%;
         animation: 1s ease-in .5s 1 reverse;
+        display: flex;
+        flex-direction: column;
+        color: #3ee254;
     }
     .correct .material-symbols-outlined {
         fill: 1;
         font-weight: 100;
         font-size: 165px;
-        color: #3ee254;
+        
+    }
+
+    .incorrect{
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        animation: 1s ease-in .5s 1 reverse;
+        color: #f02a45;
+        font-weight: 700;
+        font-size: 44px;
     }
 
     .incorrect .material-symbols-outlined {
         fill: 1;
         font-weight: 100;
         font-size: 165px;
-        color: #f02a45;
     }
 
     

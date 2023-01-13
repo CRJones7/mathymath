@@ -57,12 +57,12 @@ const handleSubmit = (e) => {
         generateQuestion()
         setTimeout(() => {
             setCorrectCheckVisible(false)
-        }, 3000);
+        }, 2000);
     }else if (correct != answer){
         setWrongXVisble(true)
         setTimeout(() => {
             setWrongXVisble(false)
-        }, 3000)
+        }, 2000)
     }
 }
 
@@ -88,7 +88,7 @@ const handleSubmit = (e) => {
                     <div className='question'>
                     <h1><span style={{marginLeft: '80px'}}>{firstValue}</span> <br/> {`+ ${secondValue}`}</h1>
                     <hr className='equalsBar'/>
-                    <input type="number" className='answerInput' placeholder='??????' onChange={handleAnswerInput}/>
+                    <input type="number" className='answerInput' placeholder='??????' onChange={handleAnswerInput} value={guess}/>
                     <button className='submitBtn' onClick={(e) => handleSubmit(e)}>Submit</button>
                     </div>
                     : correctCheckVisible && !wrongXVisible ?
@@ -103,9 +103,8 @@ const handleSubmit = (e) => {
                     <span className="material-symbols-outlined">
                     cancel
                     </span>
-                    {wrongs[Math.floor(Math.random() * 5)]}
+                    {wrongs[Math.floor(Math.random() * 4)]}
                     </div> : null
-                    
                     }
             </div>
         </div>
