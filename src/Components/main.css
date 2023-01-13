@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #f9c60edf;
+    background-color: #f9c60ec5;
     z-index: 1;
     padding: 0px 5px 10px 5px;
     /* padding-top: 60px; */
@@ -39,20 +39,44 @@
   .nav li:hover {
     color: #f1f1f1;
   }
-  
-  .openNav{
-    height: fit-content;
-    width: 0;
+  .closedNav{
+    height: 100%;
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: #f9c60edf; */
+    z-index: 1;
+    padding: 0px 5px 10px 5px;
+    /* padding-top: 60px; */
+    overflow-x: hidden;
+    transition: transform 0.5s;
+    
+    margin-top: 0;
+    list-style: none;
+  }
+  .closedNavBtn{
+    height: 100%;
+    width: 1%;
     position: fixed;
     top: 0;
     left: 3px;
     z-index: 1;
-    padding: 3%;
+    padding: 20px 30px 4px 20px;
+    /* border-right: 5px groove #f9c60ec5; */
+    transition: transform 0.5s;
+    color: #5555d3;
+    cursor: pointer;
+  }
+  .closedNavBtn:hover{
+    color: #f9c60e;
+    border-right: 6px groove #5555d3;
+
   }
 
-  .homePage{
+  .mainContainer{
     background-color: #5aa9e6;
-    color: rgb(85, 85, 211);
+    color: #5555d3;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -65,7 +89,7 @@
 .contentContainer{
 position: absolute;
   top: 40%;
-  left: 40%;
+  left: 30%;
   margin: -50px 0 0 -50px;
 }
 
@@ -86,7 +110,7 @@ position: absolute;
       width: 0;
     }
     to {
-      width: 101%;
+      width: 100%;
     }
   }
   @keyframes blinkTextCursor {
@@ -106,7 +130,7 @@ position: absolute;
   }
 
   .selectionBtn{
-    margin: 8px auto 8px auto;
+    margin: 8px 8px 8px 8px;
     padding: 3px 18px 3px 18px;
     background-color: #f86624;
     border: 1px solid #f86624;
@@ -123,6 +147,86 @@ position: absolute;
     font-weight: 600;
     font-size: 23px;
   }
+
+  .levelSelectors{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+.level{
+    margin-top: 15px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+/* .levelSelectorTitle{
+    color: #062842;
+    font-weight: 700;
+    font-size: 75px;
+    letter-spacing: 7px!important;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    animation: typewriter 4s steps(30, end) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+} */
+/* .mathContainer{
+    width: 100vw;
+    margin: auto;
+    padding: 50px;
+} */
+.question{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.question h1{
+    font-size: 102px;
+    margin-bottom: 2px;
+}
+
+.answerInput{
+    height: 150px;
+    min-width: 150px;
+    max-width: 350px;
+    align-self: center;
+    margin-left: 25px;
+    font-size: 102px;
+    border: 5px solid #062842;
+    border-radius: 8px;
+}
+
+.talk{
+    font-size: 20px;
+}
+
+.equalsBar{
+    border: 2px solid #f8662473;
+    border-radius: 8px;
+    background-color: #f86624;
+    height: 4px;
+    margin-left: 23%;
+    margin-right: 20%;
+    
+}
+
+ @media only screen and (max-width: 1920px){
+    .contentContainer{
+          left: 18%;
+        }
+ }
+ @media only screen and (max-width: 1820px){
+    .contentContainer{
+        left: 16%;
+      }
+ }
+ @media only screen and (max-width: 1820px){
+    .contentContainer{
+        left: 12%;
+      }
+ }
   /* tablets */
   @media only screen and  (max-width: 900px){
     .contentContainer{
@@ -149,16 +253,51 @@ position: absolute;
             align-items: center;
             padding-top: 20px;
           }
+          .levelSelectorTitle{
+            font-size: 55px;
+        }
     }
+
+    
   /* phones */
   @media only screen and  (max-width: 500px){
     .homeTitle{
         font-size: 45px;
     }
+    .levelSelectorTitle{
+        font-size: 80%;
+    }
     .contentContainer{
         position: absolute;
-          top: 30%;
+          top: 15%;
           left: 20%;
           margin: -50px 0 0 -50px;
+        }
+
+        .question{
+            display: unset;
+        }
+        .question h1{
+          
+        }
+        
+        .answerInput{
+            height: 150px;
+            min-width: 150px;
+            max-width: 300px;
+            align-self: center;
+            margin-left: 10px;
+            font-size: 102px;
+            border: 5px solid #062842;
+            border-radius: 8px;
+        }
+        .equalsBar{
+            border: 2px solid #f8662473;
+            border-radius: 8px;
+            background-color: #f86624;
+            height: 4px;
+            margin-left: 5%;
+            margin-right: 7%;
+            
         }
     }

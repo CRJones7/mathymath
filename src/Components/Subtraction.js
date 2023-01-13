@@ -4,7 +4,7 @@ import React from 'react';
 
 const Subtraction = () => {
     return (
-        <div>
+        <div className='homePage'>
             Subtraction Fun!
         </div>
     )

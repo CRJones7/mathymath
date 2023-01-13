@@ -4,7 +4,7 @@ import React from 'react';
 
 const MixedMath = () => {
     return (
-        <div>
+        <div className='homePage'>
             ????
         </div>
     )

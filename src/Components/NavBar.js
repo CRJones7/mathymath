@@ -6,11 +6,13 @@ const NavBar = () => {
     const [navOpen, setNavOpen] = useState(false)
     return(
         <div>{!navOpen ?
-            <span className='openNav' onClick={() => setNavOpen(true)}>
-                <span class="material-symbols-outlined">
+            
+            <span className='closedNavBtn' onClick={() => setNavOpen(true)}>
+                <span className="material-symbols-outlined">
                 menu
                 </span>
             </span>
+   
             :
             <ul className='nav'>
                 <li className='links exitNav' onClick={() => setNavOpen(false)}>&times;</li>
