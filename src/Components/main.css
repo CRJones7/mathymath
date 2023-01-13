@@ -71,8 +71,6 @@
   }
   .closedNavBtn:hover{
     color: #f9c60e;
-    border-right: 6px groove #5555d3;
-
   }
 
 .material-symbols-outlined {
@@ -87,7 +85,7 @@
     color: #5555d3;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 32px;
     margin-top:0;
     position: relative;
@@ -134,7 +132,7 @@
 
   .selections{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding-top: 40px;
   }
@@ -228,12 +226,9 @@
 
   /* tablets */
   @media only screen and  (max-width: 900px){
-    /* .contentContainer{
-        position: absolute;
-          top: 40%;
-          left: 25%;
-          margin: -50px 0 0 -50px;
-        } */
+    .contentContainer{
+        padding: 20px;
+        }
         .selectionBtn{
             margin: 8px auto 8px auto;
             padding: 3px 18px 3px 18px;

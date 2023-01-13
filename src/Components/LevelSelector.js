@@ -14,19 +14,19 @@ const LevelSelector = ({mathType, handleLevel}) => {
                 <h1 className='homeTitle levelSelectorTitle'>Choose Difficulty:</h1>
                 <div className='levelSelectors'>
                     <div className='level'>
-                    <label>Beginner</label>
+                    <label className='levelLabel'>Beginner</label>
                     <input type='radio' checked={localLevel === 'easy'} onChange={() => setLocalLevel('easy')}/>
                     </div>
                     <div className='level'>
-                    <label>Medium Good</label>
+                    <label className='levelLabel'>Medium Good</label>
                     <input type='radio' checked={localLevel === 'medium'} onChange={() => setLocalLevel('medium')}/>
                     </div>
                     <div className='level'>
-                    <label>Good Good</label>
+                    <label className='levelLabel'>Good Good</label>
                     <input type='radio' checked={localLevel === 'hard'} onChange={() => setLocalLevel('hard')}/>
                     </div>
                     <div className='level'>
-                    <label>Math Genius</label>
+                    <label className='levelLabel'>Math Genius</label>
                     <input type='radio' checked={localLevel === 'hardX'} onChange={() => setLocalLevel('hardX')}/>
                     </div>
                 </div>
