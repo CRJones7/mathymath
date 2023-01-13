@@ -67,12 +67,20 @@
     transition: transform 0.5s;
     color: #5555d3;
     cursor: pointer;
+    font-weight: 700;
   }
   .closedNavBtn:hover{
     color: #f9c60e;
     border-right: 6px groove #5555d3;
 
   }
+
+.material-symbols-outlined {
+    fill: 0;
+    font-weight: 700;
+    font-size: 165%;
+}
+
 
   .mainContainer{
     background-color: #5aa9e6;
