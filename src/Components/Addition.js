@@ -86,6 +86,7 @@ const handleSubmit = (e) => {
                 <div className='mathContainer'>
                     {!correctCheckVisible && !wrongXVisible ?
                     <div className='question'>
+                    <div>level: {level}</div>
                     <h1><span style={{marginLeft: '80px'}}>{firstValue}</span> <br/> {`+ ${secondValue}`}</h1>
                     <hr className='equalsBar'/>
                     <input type="number" className='answerInput' placeholder='??????' onChange={handleAnswerInput} value={guess}/>
