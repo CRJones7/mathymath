@@ -73,10 +73,30 @@
     color: #f9c60e;
   }
 
-.material-symbols-outlined {
+.closedNavBtn .material-symbols-outlined {
     fill: 0;
     font-weight: 700;
     font-size: 165%;
+}
+
+.inGameBtns{
+    /* height: 100%; */
+    /* width: 50%; */
+    position: fixed;
+    top: 0;
+    right: 3px;
+    z-index: 1;
+    padding: 13px 30px 4px 20px;
+    /* border-right: 5px groove #f9c60ec5; */
+    transition: transform 0.5s;
+    color: #5555d3;
+    cursor: pointer;
+    font-weight: 700;
+}
+.inGameBtns .material-symbols-outlined {
+    fill: 0;
+    font-weight: 400;
+    margin-left: 6px;
 }
 
 
@@ -199,14 +219,18 @@
 }
 
 .answerInput{
-    height: 150px;
+    height: 130px;
     min-width: 150px;
-    max-width: 350px;
+    max-width: 340px;
     align-self: center;
-    margin-left: 25px;
+    margin: auto;
     font-size: 102px;
     border: 5px solid #062842;
     border-radius: 8px;
+    background-color: #5555d3;
+    color: #f9c60e;
+    padding: 0 0 0 20px;
+    box-shadow: 1px 1px 5px #5555d3;
 }
 
 .talk{
@@ -223,7 +247,22 @@
     
 }
 
+.submitBtn{
+    height: 40px;
+    width: fit-content;
+    padding: 8px 20px ;
+    align-self: center;
+    margin:  12px auto;
+    display: block;
+    background-color: #062842;
+    border: 1px solid #5555d3;
+     border-radius: 3px;
+    box-shadow: 1px 1px 5px #5555d3;
+    color: #5555d3;
+    font-weight: 700;
+    font-size: 20px;
 
+}
   /* tablets */
   @media only screen and  (max-width: 900px){
     .contentContainer{
@@ -268,14 +307,12 @@
         .question{
             display: unset;
         }
-        .question h1{
-          
-        }
+       
         
         .answerInput{
             height: 150px;
             min-width: 150px;
-            max-width: 300px;
+            max-width: 290px;
             align-self: center;
             margin-left: 10px;
             font-size: 102px;

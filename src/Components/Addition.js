@@ -44,11 +44,20 @@ const handleAnswer = (e) => {
         {!level && <LevelSelector mathType={"Addition"} handleLevel={levelSetter}/>}
         {level &&
             <div className='mainContainer'>
+                <div className="inGameBtns">
+                <span class="material-symbols-outlined">
+                restart_alt
+                </span>
+                <span class="material-symbols-outlined">
+                 display_settings
+                 </span> 
+                </div>
                 <div className='mathContainer'>
                     <div className='question'>
                     <h1><span style={{marginLeft: '80px'}}>{firstValue}</span> <br/> {`+ ${secondValue}`}</h1>
                     <hr className='equalsBar'/>
-                    <input type="number" className='answerInput' placeholder='12345' onChange={handleAnswer}/>
+                    <input type="number" className='answerInput' placeholder='??????' onChange={handleAnswer}/>
+                    <button className='submitBtn'>Submit</button>
                 </div>
             </div>
         </div>
