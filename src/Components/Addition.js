@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LevelSelector from './LevelSelector';
-
+import {yays, wrongs} from "./constants.js"
 
 
 const Addition = ({}) => {
@@ -18,8 +18,8 @@ const Addition = ({}) => {
     const levelSetter = (value) => {
         setLevel(value)
     }
-    const yays = ['Nice Work!', 'Good job!', 'Crushed it!', "Correct!", "OooWeee!"]
-    const wrongs = ['Try again!', 'Think again!', 'Woopsies', 'So Close!!' ]
+    // const yays = ['Nice Work!', 'Good job!', 'Crushed it!', "Correct!", "OooWeee!"]
+    // const wrongs = ['Try again!', 'Think again!', 'Woopsies', 'So Close!!' ]
     const generateQuestion = () => {
         getRandomNumber1()
         getRandomNumber2()
@@ -30,14 +30,18 @@ const Addition = ({}) => {
 // could refine how num is generated
         let num = max ? Math.floor(Math.random() * max) : 0
         setFirstValue(num)
-        return
+
+        if(num !== 0){
+            let numTwo = max ? Math.floor(Math.random() * num) : 0
+            setSecondValue(numTwo)
+        }
    }
 
    const getRandomNumber2 = () => {
-    const max = level && level === 'easy' ? 10 : level && level === 'medium' ? 100 : level && level === 'hard' ? 1000 : level && level === 'hardX' ? 9000 : false
-// could refine how num is generated
-    let num = max && Math.floor(Math.random() * max)
-    setSecondValue(num)
+//     const max = level && level === 'easy' ? 10 : level && level === 'medium' ? 100 : level && level === 'hard' ? 1000 : level && level === 'hardX' ? 9000 : false
+// // could refine how num is generated
+//     let num = max && Math.floor(Math.random() * max)
+//     setSecondValue(num)
     return
 }
 
@@ -49,7 +53,6 @@ const handleSubmit = (e) => {
     e.preventDefault()
     let correct = firstValue + secondValue
     let answer = Number(guess)
-    console.log(correct, Number(guess) )
 
     if(correct === answer){
         setCorrectCheckVisible(true)
@@ -84,12 +87,14 @@ const handleSubmit = (e) => {
                  </span> 
                 </div>
                 <div className='mathContainer'>
+                <div>level: {level}</div>
                     {!correctCheckVisible && !wrongXVisible ?
                     <div className='question'>
-                    <div>level: {level}</div>
                     <h1><span style={{marginLeft: '80px'}}>{firstValue}</span> <br/> {`+ ${secondValue}`}</h1>
                     <hr className='equalsBar'/>
+                    <form >
                     <input type="number" className='answerInput' placeholder='??????' onChange={handleAnswerInput} value={guess}/>
+                    </form>
                     <button className='submitBtn' onClick={(e) => handleSubmit(e)}>Submit</button>
                     </div>
                     : correctCheckVisible && !wrongXVisible ?
@@ -97,14 +102,14 @@ const handleSubmit = (e) => {
                     <span className="material-symbols-outlined">
                     verified
                     </span>
-                    {yays[Math.floor(Math.random() * 5)]}
+                    {yays[Math.floor(Math.random() * 6)]}
                     </div> 
                     : !correctCheckVisible && wrongXVisible ?
                     <div className='incorrect'>
                     <span className="material-symbols-outlined">
                     cancel
                     </span>
-                    {wrongs[Math.floor(Math.random() * 4)]}
+                    {wrongs[Math.floor(Math.random() * 5)]}
                     </div> : null
                     }
             </div>

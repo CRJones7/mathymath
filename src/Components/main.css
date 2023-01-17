@@ -158,7 +158,7 @@
   }
 
   .selectionBtn{
-    margin: 8px 8px 8px 8px;
+    margin: 8px 8px 200px 8px;
     padding: 3px 18px 3px 18px;
     background-color: #f86624;
     border: 1px solid #f86624;
@@ -169,6 +169,7 @@
     height: 35px;
     width: 215px;
   }
+
 
   .btnLink{
     text-decoration: none;
@@ -190,6 +191,11 @@
     margin-right: auto;
     margin-bottom: 15px;
     margin-left: auto;
+}
+.mathType{
+    margin-top: 0;  
+    display: flex;
+    justify-content: center; 
 }
 
 .question{
@@ -366,5 +372,6 @@
         font-size: 165px;
     }
 
+   
     
     

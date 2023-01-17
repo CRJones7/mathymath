@@ -10,8 +10,8 @@ const LevelSelector = ({mathType, handleLevel}) => {
     return(
         <div className='mainContainer'>
             <div className='contentContainer'>
-                <p className='talk'>{`You selected to practice ${mathType} problems today. Before we start, what level mather are you?`}</p>
-                <h1 className='homeTitle levelSelectorTitle'>Choose Difficulty:</h1>
+                <h1 className='mathType'>{mathType}</h1>
+                <h2 className='homeTitle levelSelectorTitle'>Select Difficulty:</h2>
                 <div className='levelSelectors'>
                     <div className='level'>
                     <label className='levelLabel'>Beginner</label>

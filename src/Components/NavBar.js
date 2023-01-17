@@ -17,16 +17,16 @@ const NavBar = () => {
             <ul className='nav'>
                 <li className='links exitNav' onClick={() => setNavOpen(false)}>&times;</li>
                 <li >
-                <Link to="/" className='links'>Home</Link>
+                <Link to="/" className='links' onClick={() => setNavOpen(false)}>Home</Link>
                 </li>
                 <li className='links'>
-                <Link to="/Addition" className='links'>Addition</Link>
+                <Link to="/Addition" className='links' onClick={() => setNavOpen(false)}>Addition</Link>
                 </li>
                 <li className='links'>
-                <Link to="/Subtraction" className='links'>Subtraction</Link>
+                <Link to="/Subtraction" className='links' onClick={() => setNavOpen(false)}>Subtraction</Link>
                 </li >
                 <li className='links'>
-                <Link to="/MixedMath" className='links'>Mixed Questions</Link>
+                <Link to="/MixedMath" className='links' onClick={() => setNavOpen(false)}>Mixed Questions</Link>
                 </li>
             </ul>
             }
