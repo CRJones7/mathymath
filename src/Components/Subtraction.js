@@ -24,19 +24,26 @@ const Subtraction = () => {
         getRandomNumber2()
     }
 
-   const getRandomNumber1 = () => {
+    const getRandomNumber1 = () => {
         const max = level && level === 'easy' ? 10 : level && level === 'medium' ? 100 : level && level === 'hard' ? 1000 : level && level === 'hardX' ? 9000 : false
 // could refine how num is generated
         let num = max ? Math.floor(Math.random() * max) : 0
         setFirstValue(num)
-        return
+
+        if(num !== 0){
+            let numTwo = max ? Math.floor(Math.random() * num) : 0
+            setSecondValue(numTwo)
+        }else{
+            let numTwo = max ? Math.floor(Math.random() * max) : 0
+            setSecondValue(numTwo)
+        }
    }
 
    const getRandomNumber2 = () => {
-    const max = level && level === 'easy' ? 10 : level && level === 'medium' ? 100 : level && level === 'hard' ? 1000 : level && level === 'hardX' ? 9000 : false
-// could refine how num is generated
-    let num = max && Math.floor(Math.random() * max)
-    setSecondValue(num)
+//     const max = level && level === 'easy' ? 10 : level && level === 'medium' ? 100 : level && level === 'hard' ? 1000 : level && level === 'hardX' ? 9000 : false
+// // could refine how num is generated
+//     let num = max && Math.floor(Math.random() * max)
+//     setSecondValue(num)
     return
 }
 
