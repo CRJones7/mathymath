@@ -30,7 +30,7 @@ const LevelSelector = ({mathType, handleLevel}) => {
                     <input type='radio' checked={localLevel === 'hardX'} onChange={() => setLocalLevel('hardX')}/>
                     </div>
                 </div>
-            <button disabled={!localLevel} className='selectionBtn' onClick={() => handleSubmit()}>Start</button>
+            <button disabled={!localLevel} className='selectionBtn levelStart' onClick={() => handleSubmit()}>Start</button>
 
             </div>
         </div>

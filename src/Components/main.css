@@ -124,7 +124,8 @@
 .homeTitle{
     color: #062842;
     font-weight: 700;
-    font-size: 75px;
+    font-size: 65px;
+    margin-top: 5px;
     letter-spacing: 7px!important;
     overflow: hidden;
     border-right: 2px solid hsl(0, 0%, 80%);
@@ -158,7 +159,7 @@
   }
 
   .selectionBtn{
-    margin: 8px 8px 200px 8px;
+    margin: 8px 8px 8px 8px;
     padding: 3px 18px 3px 18px;
     background-color: #f86624;
     border: 1px solid #f86624;
@@ -169,7 +170,9 @@
     height: 35px;
     width: 215px;
   }
-
+.levelStart{
+    margin-bottom: 45px;
+}
 
   .btnLink{
     text-decoration: none;
@@ -194,8 +197,10 @@
 }
 .mathType{
     margin-top: 0;  
+    margin-bottom: 5px;
     display: flex;
     justify-content: center; 
+    color: #f1f1f1;
 }
 
 .question{
@@ -287,6 +292,7 @@
   @media only screen and  (max-width: 500px){
     .homeTitle{
         font-size: 45px;
+        margin-top: 0;
     }
     .levelSelectorTitle{
         font-size: 80%;
