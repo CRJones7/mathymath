@@ -2,20 +2,17 @@ import React, { useEffect, useState } from 'react';
 import LevelSelector from './LevelSelector';
 import {yays, wrongs} from "./constants.js"
 
-const MixedMath = () => {
+
+const Addition = ({}) => {
     const [level, setLevel] = useState(null)
     const [firstValue, setFirstValue] = useState(null)
     const [secondValue, setSecondValue] = useState(null)
     const [guess, setGuess] = useState(null)
     const [correctCheckVisible, setCorrectCheckVisible] = useState(false)
     const [wrongXVisible, setWrongXVisble] = useState(false)
-
-    const [mathType, setMathType] = useState('')
-    const types = ['+', "-", "x",'+', "-", "x",'+', "-", "x",]
     useEffect(() => {
         // generating numbers
         generateQuestion()
-        typeSelector()
     }, [level])
 
     const levelSetter = (value) => {
@@ -27,12 +24,8 @@ const MixedMath = () => {
         getRandomNumber1()
         getRandomNumber2()
     }
-    const typeSelector = () => {
-        let newType = types[Math.floor(Math.random() * types.length)]
-        setMathType(newType)
-    }
 
-    const getRandomNumber1 = () => {
+   const getRandomNumber1 = () => {
         const max = level && level === 'easy' ? 10 : level && level === 'medium' ? 100 : level && level === 'hard' ? 1000 : level && level === 'hardX' ? 9000 : false
 // could refine how num is generated
         let num = max ? Math.floor(Math.random() * max) : 0
@@ -40,9 +33,6 @@ const MixedMath = () => {
 
         if(num !== 0){
             let numTwo = max ? Math.floor(Math.random() * num) : 0
-            setSecondValue(numTwo)
-        }else{
-            let numTwo = max ? Math.floor(Math.random() * max) : 0
             setSecondValue(numTwo)
         }
    }
@@ -61,23 +51,13 @@ const handleAnswerInput = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault()
-        let correct = null
-    if(mathType === 'x'){
-         correct = firstValue * secondValue
-    }if(mathType === '+'){
-         correct = firstValue + secondValue
-    }if(mathType === '-'){
-        correct = firstValue - secondValue
-    }
-    
+    let correct = firstValue * secondValue
     let answer = Number(guess)
-    console.log(correct, Number(guess) )
 
     if(correct === answer){
         setCorrectCheckVisible(true)
         setGuess(null)
         generateQuestion()
-        typeSelector()
         setTimeout(() => {
             setCorrectCheckVisible(false)
         }, 2000);
@@ -89,20 +69,14 @@ const handleSubmit = (e) => {
     }
 }
 
-const resetQuestion = () => {
-    setGuess(null)
-    generateQuestion()
-    typeSelector()
-}
-
 
     return (
         <>
-        {!level && <LevelSelector mathType={"Mixed Math"} handleLevel={levelSetter}/>}
+        {!level && <LevelSelector mathType={"Multiplication"} handleLevel={levelSetter}/>}
         {level &&
             <div className='mainContainer'>
                 <div className="inGameBtns">
-                <span className="material-symbols-outlined" onClick={() => resetQuestion()}>
+                <span className="material-symbols-outlined" onClick={() => generateQuestion()}>
                 restart_alt
                 <span className='tooltip'>New Question</span>
                 </span>
@@ -116,10 +90,11 @@ const resetQuestion = () => {
                 <div>level: {level}</div>
                     {!correctCheckVisible && !wrongXVisible ?
                     <div className='question'>
-                    
-                    <h1><span style={{marginLeft: '80px'}}>{firstValue}</span> <br/> {`${mathType} ${secondValue}`}</h1>
+                    <h1><span style={{marginLeft: '80px'}}>{firstValue}</span> <br/> {`x ${secondValue}`}</h1>
                     <hr className='equalsBar'/>
+                    <form >
                     <input type="number" className='answerInput' placeholder='??????' onChange={handleAnswerInput} value={guess}/>
+                    </form>
                     <button className='submitBtn' onClick={(e) => handleSubmit(e)}>Submit</button>
                     </div>
                     : correctCheckVisible && !wrongXVisible ?
@@ -144,4 +119,4 @@ const resetQuestion = () => {
     )
 }
 
-export default MixedMath;
+export default Addition;

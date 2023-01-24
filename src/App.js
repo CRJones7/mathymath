@@ -10,6 +10,7 @@ import Home from "./Components/Home"
 import Addition from './Components/Addition';
 import Subtraction from './Components/Subtraction';
 import MixedMath from './Components/MixedMath';
+import Multiplication from "./Components/Multiplication"
 import NavBar from './Components/NavBar';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <Route exact path="/Addition" element={<Addition/>}></Route>
     <Route exact path="/Subtraction" element={<Subtraction/>}></Route>
     <Route exact path="/MixedMath" element={<MixedMath/>}></Route>
+    <Route exact path='Multiplication' element={<Multiplication/>}></Route>
     </Routes>
     </div>
     </div>

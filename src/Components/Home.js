@@ -13,8 +13,7 @@ const HomePage = () => {
                 <div className='selections'>
                     <button className='selectionBtn'><Link className="btnLink" to="/Addition">Addition</Link></button>
                     <button className='selectionBtn'><Link className="btnLink" to="/Subtraction">Subtraction</Link></button>
-                    <button className='selectionBtn'><Link className="btnLink" to="/Subtraction">Multiplication</Link></button>
-                    <button className='selectionBtn'><Link className="btnLink" to="/Subtraction">Division</Link></button>
+                    <button className='selectionBtn'><Link className="btnLink" to="/Multiplication">Multiplication</Link></button>
                     <button className='selectionBtn'><Link className="btnLink" to="/MixedMath">Mix it up!</Link></button>
                 </div>
             </div>
