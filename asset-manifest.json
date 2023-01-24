@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mathymath/static/css/main.f7bef25a.css",
-    "main.js": "/mathymath/static/js/main.9df6c507.js",
+    "main.js": "/mathymath/static/js/main.4ab13ef0.js",
     "static/js/787.88eeccb8.chunk.js": "/mathymath/static/js/787.88eeccb8.chunk.js",
     "static/media/logo.svg": "/mathymath/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/mathymath/index.html",
     "main.f7bef25a.css.map": "/mathymath/static/css/main.f7bef25a.css.map",
-    "main.9df6c507.js.map": "/mathymath/static/js/main.9df6c507.js.map",
+    "main.4ab13ef0.js.map": "/mathymath/static/js/main.4ab13ef0.js.map",
     "787.88eeccb8.chunk.js.map": "/mathymath/static/js/787.88eeccb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7bef25a.css",
-    "static/js/main.9df6c507.js"
+    "static/js/main.4ab13ef0.js"
   ]
 }
