@@ -20,7 +20,7 @@ function App() {
         <div className='main'>
       <NavBar/>
     <Routes>
-    <Route exact path="/" element={<Home/>}></Route>
+    <Route exact path="/mathymath" element={<Home/>}></Route>
     <Route exact path="/Addition" element={<Addition/>}></Route>
     <Route exact path="/Subtraction" element={<Subtraction/>}></Route>
     <Route exact path="/MixedMath" element={<MixedMath/>}></Route>

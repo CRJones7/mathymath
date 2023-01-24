@@ -17,7 +17,7 @@ const NavBar = () => {
             <ul className='nav'>
                 <li className='links exitNav' onClick={() => setNavOpen(false)}>&times;</li>
                 <li >
-                <Link to="/" className='links' onClick={() => setNavOpen(false)}>Home</Link>
+                <Link to="/mathymath" className='links' onClick={() => setNavOpen(false)}>Home</Link>
                 </li>
                 <li className='links'>
                 <Link to="/Addition" className='links' onClick={() => setNavOpen(false)}>Addition</Link>
