@@ -104,14 +104,14 @@ const handleSubmit = (e) => {
                     <span className="material-symbols-outlined">
                     verified
                     </span>
-                    {yays[Math.floor(Math.random() * 6)]}
+                    {yays[Math.floor(Math.random() * yays.length)]}
                     </div> 
                     : !correctCheckVisible && wrongXVisible ?
                     <div className='incorrect'>
                     <span className="material-symbols-outlined">
                     cancel
                     </span>
-                    {wrongs[Math.floor(Math.random() * 5)]}
+                    {wrongs[Math.floor(Math.random() * wrongs.length)]}
                     </div> : null
                     }
             </div>

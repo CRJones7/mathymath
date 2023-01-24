@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LevelSelector from './LevelSelector';
-import {yays, wrongs} from "./constants.js"
+import {yays, wrongs, types} from "./constants.js"
 
 const MixedMath = () => {
     const [level, setLevel] = useState(null)
@@ -11,7 +11,7 @@ const MixedMath = () => {
     const [wrongXVisible, setWrongXVisble] = useState(false)
 
     const [mathType, setMathType] = useState('')
-    const types = ['+', "-", "x",'+', "-", "x",'+', "-", "x",]
+    
     useEffect(() => {
         // generating numbers
         generateQuestion()
@@ -127,14 +127,14 @@ const resetQuestion = () => {
                     <span className="material-symbols-outlined">
                     verified
                     </span>
-                    {yays[Math.floor(Math.random() * 6)]}
+                    {yays[Math.floor(Math.random() * yays.length)]}
                     </div> 
                     : !correctCheckVisible && wrongXVisible ?
                     <div className='incorrect'>
                     <span className="material-symbols-outlined">
                     cancel
                     </span>
-                    {wrongs[Math.floor(Math.random() * 5)]}
+                    {wrongs[Math.floor(Math.random() * wrongs.length)]}
                     </div> : null
                     }
             </div>
