@@ -6,7 +6,7 @@ const MixedMath = () => {
     const [level, setLevel] = useState(null)
     const [firstValue, setFirstValue] = useState(null)
     const [secondValue, setSecondValue] = useState(null)
-    const [guess, setGuess] = useState(null)
+    const [guess, setGuess] = useState()
     const [correctCheckVisible, setCorrectCheckVisible] = useState(false)
     const [wrongXVisible, setWrongXVisble] = useState(false)
 
@@ -75,7 +75,7 @@ const handleSubmit = (e) => {
 
     if(correct === answer){
         setCorrectCheckVisible(true)
-        setGuess(null)
+        setGuess()
         generateQuestion()
         typeSelector()
         setTimeout(() => {
@@ -90,7 +90,7 @@ const handleSubmit = (e) => {
 }
 
 const resetQuestion = () => {
-    setGuess(null)
+    setGuess()
     generateQuestion()
     typeSelector()
 }

@@ -65,7 +65,7 @@
     padding: 20px 30px 4px 20px;
     /* border-right: 5px groove #f9c60ec5; */
     transition: transform 0.5s;
-    color: #5555d3;
+    color: #3d3df7;
     cursor: pointer;
     font-weight: 700;
   }
@@ -89,7 +89,7 @@
     padding: 13px 30px 4px 20px;
     /* border-right: 5px groove #f9c60ec5; */
     transition: transform 0.5s;
-    color: #5555d3;
+    color: #3d3df7;
     cursor: pointer;
     font-weight: 700;
 }
@@ -102,7 +102,7 @@
 
   .mainContainer{
     background-color: #5aa9e6;
-    color: #5555d3;
+    color: #3d3df7;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -223,10 +223,10 @@
     font-size: 102px;
     border: 5px solid #062842;
     border-radius: 8px;
-    background-color: #5555d3;
+    background-color: #3d3df7;
     color: #f9c60e;
     padding: 0 0 0 20px;
-    box-shadow: 1px 1px 5px #5555d3;
+    box-shadow: 1px 1px 5px #3d3df7;
 }
 
 .talk{
@@ -251,10 +251,10 @@
     margin:  12px auto;
     display: block;
     background-color: #062842;
-    border: 1px solid #5555d3;
+    border: 1px solid #3d3df7;
      border-radius: 3px;
-    box-shadow: 1px 1px 5px #5555d3;
-    color: #5555d3;
+    box-shadow: 1px 1px 5px #3d3df7;
+    color: #3d3df7;
     font-weight: 700;
     font-size: 20px;
 

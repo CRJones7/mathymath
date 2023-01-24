@@ -6,7 +6,7 @@ const Subtraction = () => {
     const [level, setLevel] = useState(null)
     const [firstValue, setFirstValue] = useState(null)
     const [secondValue, setSecondValue] = useState(null)
-    const [guess, setGuess] = useState(null)
+    const [guess, setGuess] = useState()
     const [correctCheckVisible, setCorrectCheckVisible] = useState(false)
     const [wrongXVisible, setWrongXVisble] = useState(false)
     useEffect(() => {
@@ -59,7 +59,7 @@ const handleSubmit = (e) => {
 
     if(correct === answer){
         setCorrectCheckVisible(true)
-        setGuess(null)
+        setGuess()
         generateQuestion()
         setTimeout(() => {
             setCorrectCheckVisible(false)
